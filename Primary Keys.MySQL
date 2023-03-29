@@ -1,0 +1,9 @@
+/*
+Enter your query below.
+Please append a semicolon ";" at the end of the query
+*/
+select p1.stock_code
+from price_today p1
+join price_tomorrow p2 ON p1.stock_code = p2.stock_code
+where p2.price>p1.price
+order by p1.stock_code asc;
